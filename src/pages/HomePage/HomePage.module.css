@@ -1,0 +1,66 @@
+.background {
+    background-image: url(../../assets/homepage.webp);
+    background-size: cover;
+    height: 92.4vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .background {
+        background-image: url(../../assets/homepage@2x.webp);
+    }
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 260px 805px 260px 64px;
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mainTitle {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--white);
+    letter-spacing: var(--letter-spacing-002);
+    line-height: var(--line-height-48-32);
+}
+
+.descTitle {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--white);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-24-32);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    color: var(--white);
+    background-color: var(--button);
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    font-size: var(--font-size-16);
+    letter-spacing: var(--letter-spacing-002);
+    max-width: 173px;
+}
+
+.link:hover,
+.link:focus {
+    background-color: var(--button-hover);
+    transition: var(--transition);
+}

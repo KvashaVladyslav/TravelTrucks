@@ -1,0 +1,26 @@
+.navBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 450px;
+    padding: 24px 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.linksBox {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.navLink {
+    color: var(--main);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+}
+
+.active {
+    color: var(--button-hover)
+}

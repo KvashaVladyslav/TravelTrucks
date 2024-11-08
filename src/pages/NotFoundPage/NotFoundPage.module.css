@@ -1,0 +1,61 @@
+.background {
+    background-image: url(../../assets/homepage.webp);
+    background-size: cover;
+    height: 92.4vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .background {
+        background-image: url(../../assets/homepage@2x.webp);
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: max-content;
+    margin: auto;
+    height: 100%;
+}
+
+.error {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--white);
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.text {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    color: var(--white);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    color: var(--white);
+    background-color: var(--button);
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    font-size: var(--font-size-16);
+    letter-spacing: var(--letter-spacing-002);
+    max-width: 173px;
+}
