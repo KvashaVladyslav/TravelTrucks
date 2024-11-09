@@ -21,6 +21,11 @@
     letter-spacing: var(--letter-spacing-0);
 }
 
+.navLink:hover,
+.navLink:focus {
+    color: var(--button-hover);
+}
+
 .active {
     color: var(--button-hover)
 }
