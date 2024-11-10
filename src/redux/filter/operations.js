@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 export const getAllFiltredTrucks = createAsyncThunk(
   'filtredTrucks/getAllTrucks',
@@ -16,12 +17,14 @@ export const getAllFiltredTrucks = createAsyncThunk(
         });
       }
 
-      const response = await axios.get('/campers', {
-        params,
-      });
+      const response = await axios.get('/campers', { params });
+
+      toast.success('Trucks fetched successfully!');
 
       return response.data.items;
     } catch (error) {
+      toast.error('There are no trucks on your request, try again');
+
       return thunkAPI.rejectWithValue(error.message);
     }
   }

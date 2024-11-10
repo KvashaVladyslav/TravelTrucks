@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 44px 57px;
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    max-width: 641px;
+    width: 100%;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-20-24);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--main);
+}
+
+.desc {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--gray);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.input {
+    padding: 18px;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton {
+    max-width: 166px;
+    width: 100%;
+}

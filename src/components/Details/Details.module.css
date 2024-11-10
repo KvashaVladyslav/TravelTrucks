@@ -207,3 +207,9 @@
     letter-spacing: var(--letter-spacing-0);
     color: var(--text);
 }
+
+.featuresFormBox {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}

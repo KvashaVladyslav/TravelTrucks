@@ -6,14 +6,24 @@ import CatalogListItem from '../CatalogListItem/CatalogListItem';
 import css from './CatalogList.module.css';
 import FilterForm from '../FilterForm/FilterForm';
 import { selectFilteredTrucks } from '../../redux/filter/selectors';
+import { toast } from 'react-hot-toast';
 
 export default function CatalogList() {
   const dispatch = useDispatch();
   const allTrucks = useSelector(selectTrucks);
   const filteredTrucks = useSelector(selectFilteredTrucks) || []; 
 
-  useEffect(() => {
-    dispatch(getAllTrucks());
+    useEffect(() => {
+    const fetchTrucks = async () => {
+      try {
+        await dispatch(getAllTrucks()).unwrap();
+        toast.success('Trucks fetched successfully!');
+      } catch {
+        toast.error('Failed to fetch trucks. Please try again later.');
+      }
+    };
+
+    fetchTrucks();
   }, [dispatch]);
 
   

@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { Toaster } from 'react-hot-toast';
 
 
 const Navigation = lazy(() => import("../Navigation/Navigation"))
@@ -14,6 +15,10 @@ export default function App() {
 
   return (
     <div>
+      <Toaster
+      position="top-center"
+      reverseOrder={false}
+    />
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>

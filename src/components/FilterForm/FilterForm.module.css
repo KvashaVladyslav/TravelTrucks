@@ -96,6 +96,7 @@
     position: relative;
 }
 
+
 .iconMap {
     position: absolute;
     left: 20px;
@@ -107,5 +108,10 @@
 }
 
 .widthForInput {
+    width: 100%;
+    padding: 9px 18px;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 10px;
     width: 100%;
 }

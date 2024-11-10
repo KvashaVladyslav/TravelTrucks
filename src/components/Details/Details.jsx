@@ -7,6 +7,8 @@ import css from './Details.module.css';
 import Features from '../Features/Features';
 import Reviews from '../Reviews/Reviews';
 import icons from '../../assets/icons.svg';
+import SubmitForm from '../SubmitForm/SubmitForm';
+import { toast } from 'react-hot-toast';
 
 export default function Details() {
     const { id } = useParams();
@@ -17,10 +19,17 @@ export default function Details() {
     const [activeTab, setActiveTab] = useState('features');
 
     useEffect(() => {
-        if (!truck || truck.id !== id) {
-            dispatch(getTruckById(id));
-        }
-    }, [dispatch, id, truck]);
+    if (!truck || truck.id !== id) {
+      dispatch(getTruckById(id))
+        .unwrap()
+        .then(() => {
+          toast.success('Truck data loaded successfully!');
+        })
+        .catch((error) => {
+          toast.error(`Failed to load truck data: ${error.message}`);
+        });
+    }
+  }, [dispatch, id, truck]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -97,9 +106,10 @@ export default function Details() {
                 </button>
             </div>
 
-            <div>
+            <div className={css.featuresFormBox}>
                 {activeTab === 'features' && <Features truck={truck} />}
                 {activeTab === 'reviews' && <Reviews reviews={reviews} />}
+                <SubmitForm/>
             </div>
         </div>
     );

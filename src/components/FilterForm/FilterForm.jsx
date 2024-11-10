@@ -77,7 +77,7 @@ const FilterForm = () => {
                         <svg className={css.iconMap} height={16} width={16}>
                           <use href={`${icons}#icon-map`}></use>
                         </svg>
-                        <Field name="location">{({ field }) => (
+                        <Field className={css.input} name="location">{({ field }) => (
                             <Select
                               {...field}
                               name="location"
@@ -95,7 +95,9 @@ const FilterForm = () => {
                               styles={{
                                 control: (provided) => ({
                                   ...provided,
-                                  paddingLeft: '36px',
+                                    paddingLeft: '20px',
+                                      border: 'none',
+                                    background: 'var(--inputs)'
                                 })
                               }}
                             />
