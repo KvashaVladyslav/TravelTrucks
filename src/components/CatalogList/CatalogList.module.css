@@ -9,3 +9,21 @@
     flex-direction: row;
     gap: 40px;
 }
+
+.listWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.loadMore {
+    background-color: transparent;
+    color: var(--main);
+    border: 1px solid var(--gray-light);
+}
+
+.loadMore:hover {
+    background-color: transparent;
+    border: 1px solid var(--button-hover);
+}
