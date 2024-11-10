@@ -1,0 +1,111 @@
+.button {
+    padding: 16px;
+    background-color: transparent;
+    color: black;
+}
+
+.water,
+.gas,
+.microwave {
+    fill: none;
+    stroke: var(--main)
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 360px;
+    row-gap: 8px;
+    column-gap: 12px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 112px;
+    height: 96px;
+    padding: 0;
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--main);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0005);
+    
+}
+
+.button:hover {
+    border: 1px solid var(--button-hover);
+    background-color: transparent;
+}
+
+
+.button.active {
+    border: 1px solid var(--button-hover);
+    background-color: transparent;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--gray-light);
+}
+
+.filterWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filtersBox {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-height: max-content;
+}
+
+.submitButton {
+    max-width: 166px;
+}
+
+.titleLocation {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.selectContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.iconMap {
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+}
+
+.selectContainer .select__control {
+    padding-left: 30px;
+}
+
+.widthForInput {
+    width: 100%;
+}

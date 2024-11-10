@@ -6,6 +6,7 @@
     padding: 24px 64px;
     max-width: 1440px;
     margin: 0 auto;
+    background-color: var(--inputs);
 }
 
 .linksBox {

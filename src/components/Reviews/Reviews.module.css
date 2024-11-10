@@ -1,0 +1,61 @@
+
+.ratingStars {
+    display: flex;
+}
+.starYellow {
+    fill: var(--rating);
+}
+.starGray {
+    fill: var(--badges);
+}
+ 
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    max-width: 631px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--badges);
+    color: var(--button);
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-24-32);
+    letter-spacing: var(--letter-spacing-0);
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nameRatingBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.name {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+    margin-bottom: 4px;
+}
+
+.comment {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--text)
+}

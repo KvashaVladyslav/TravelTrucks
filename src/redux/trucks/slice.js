@@ -5,8 +5,14 @@ const trucksSlice = createSlice({
   name: 'trucks',
   initialState: {
     items: [],
+    selectedTruck: null,
     loading: false,
     error: false,
+  },
+  reducers: {
+    setSelectedTruck: (state, action) => {
+      state.selectedTruck = action.payload;
+    },
   },
   extraReducers: builder => {
     builder
@@ -28,7 +34,7 @@ const trucksSlice = createSlice({
         state.loading = true;
       })
       .addCase(getTruckById.fulfilled, (state, action) => {
-        state.items = action.payload.id;
+        state.selectedTruck = action.payload;
         state.loading = false;
         state.error = false;
       })
@@ -38,5 +44,7 @@ const trucksSlice = createSlice({
       });
   },
 });
+
+export const { setSelectedTruck } = trucksSlice.actions;
 
 export default trucksSlice.reducer;

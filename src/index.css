@@ -32,7 +32,7 @@ img {
 :root {
   --main: #101828;
   --text: #475467;
-  --grsy: #6C717B;
+  --gray: #6C717B;
   --button: #E44848;
   --button-hover: #D84343;
   --rating: #FFC531;
@@ -47,10 +47,12 @@ img {
   --font-weight-semi-bold: 600;
 
   --font-size-16: 16px;
+  --font-size-20: 20px;
   --font-size-24: 24px;
   --font-size-48: 48px;
   
   --letter-spacing-0: 0;
+  --letter-spacing-0005: 0.005em;
   --letter-spacing-001: 0.01em;
   --letter-spacing-002: 0.02em;
   --letter-spacing-003: 0.03em;
@@ -78,18 +80,17 @@ button {
   display: flex;
   justify-content: center;
   padding: 16px 32px;
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-regular);
   color: var(--white);
   background-color: var(--button);
   cursor: pointer;
   border: none;
   border-radius: 30px;
+  font-weight: var(--font-weight-regular);
   font-size: var(--font-size-16);
+  line-height: var(--line-height-16-24);
   letter-spacing: var(--letter-spacing-002);
 }
 
-button:hover,
-button:focus {
+button:hover {
   background-color: var(--button-hover);
 }

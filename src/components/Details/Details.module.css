@@ -147,3 +147,63 @@
     fill: none;
     stroke: var(--main);
 }
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+}
+
+.galleryImage {
+    width: 292px;
+    height: 312px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featuresRevievsBox {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    border-bottom: 1px solid var(--gray-light);
+    margin-bottom: 44px;
+    
+}
+
+.itemDetailsBox {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.tabButton {
+    display: flex;
+    padding-bottom: 24px;
+    background-color: transparent;
+    color: var(--main);
+    border-radius: 0;
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-20-24);
+    letter-spacing: var(--letter-spacing-0);
+}
+
+.tabButton:hover {
+    background-color: transparent;
+    border-bottom: 5px solid var(--button-hover);
+}
+
+.tabButton.active {
+    background-color: transparent;
+    border-bottom: 5px solid var(--button-hover);
+}
+
+.description {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-16-24);
+    letter-spacing: var(--letter-spacing-0);
+    color: var(--text);
+}
