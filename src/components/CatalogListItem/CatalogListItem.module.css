@@ -1,6 +1,9 @@
 .listItemBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 24px;
-    max-width: 888px;
+    max-width: 320px;
     border: 1px solid var(--gray-light);
     border-radius: 20px;
 }
@@ -13,17 +16,11 @@
     border-radius: 10px;
 }
 
-.listItemBox {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
-
 .infoWrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    max-width: 524px;
+    gap: 20px;
+    max-width: 320px;
     width: 100%;
 }
 
@@ -37,20 +34,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .priceBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 12px;
     align-items: center;
 }
 
-.nameTitle,
-.priceText {
+.nameTitle {
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-semi-bold);
     line-height: var(--line-height-24-32);
+    letter-spacing: var(--letter-spacing-0);
+}
+.priceText {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-16-24);
     letter-spacing: var(--letter-spacing-0);
 }
 
@@ -58,7 +61,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
 }
 
 .ratingBoxInfo {
@@ -68,13 +71,17 @@
 }
 
 .ratingBoxInfoText {
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-12);
     font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-16-24);
+    line-height: var(--line-height-12-16);
     letter-spacing: var(--letter-spacing-0);
 }
 
 .textUnderline {
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-12-16);
+    letter-spacing: var(--letter-spacing-0);
     position: relative;
 }
 
@@ -97,61 +104,107 @@
 }
 
 .descText {
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-12);
     font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-16-24);
+    line-height: var(--line-height-12-16);
     letter-spacing: var(--letter-spacing-0);
     color: var(--text);
-    max-width: 525px;
+    max-width: 320px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .button {
-    max-width: 166px;
-}
-
-.badgesList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-height: 104px;
-    overflow: auto;
-}
-
-.badgesItem {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
+    max-width: 140px;
     padding: 12px 18px;
-    background-color: var(--badges);
-    border: none;
-    border-radius: 30px;
-    max-width: max-content;
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-16-24);
-    letter-spacing: var(--letter-spacing-0);
 }
 
-.badgesItem::first-letter {
-    text-transform: uppercase;
+ .Water,
+ .Gas,
+ .Microwave {
+     fill: none;
+     stroke: var(--main);
+ }
+
+ .iconHeart {
+     cursor: pointer;
+     fill: var(--main);
+ }
+
+ .filledHeart {
+     fill: var(--button-hover);
+ }
+
+@media screen and (min-width: 768px) {
+    .listItemBox {
+        flex-direction: row;
+        max-width: 768px;
 }
 
-.Water,
-.Gas,
-.Microwave {
-    fill: none;
-    stroke: var(--main);
+    .infoWrapper {
+        max-width: 524px;
+    }
+
+    .descText {
+        font-size: var(--font-size-16);
+        line-height: var(--line-height-16-24);
 }
 
-.iconHeart {
-    cursor: pointer;
-    fill: var(--main);
+    .textUnderline,
+    .ratingBoxInfoText {
+        font-size: var(--font-size-16);
+        line-height: var(--line-height-16-24);    
+    }
 }
 
-.filledHeart {
-    fill: var(--button-hover);
+@media screen and (min-width:1440px) {
+
+    .listItemBox {
+        padding: 24px;
+        max-width: 888px;
+    }
+
+    .priceBox {
+        flex-direction: row;
+    }
+
+    .ratingBox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .nameTitle,
+    .priceText {
+        font-size: var(--font-size-24);
+        line-height: var(--line-height-24-32);
+    }
+
+    .descText {
+        max-width: 525px;
+    }
+
+    .button {
+        max-width: 166px;
+        padding: 16px 32px;
+    }
+
+    .Water,
+    .Gas,
+    .Microwave {
+        fill: none;
+        stroke: var(--main);
+    }
+
+    .iconHeart {
+        cursor: pointer;
+        fill: var(--main);
+    }
+
+    .filledHeart {
+        fill: var(--button-hover);
+    }
 }

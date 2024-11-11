@@ -1,18 +1,26 @@
+.background {
+    background-color: var(--inputs);
+}
+
 .navBox {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 450px;
-    padding: 24px 64px;
-    max-width: 1440px;
+    justify-content: space-between;
+    padding: 16px 20px;
+    max-width: 320px;
     margin: 0 auto;
-    background-color: var(--inputs);
+}
+
+.logo {
+    display: flex;
+    align-self: center;
 }
 
 .linksBox {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 16px;
 }
 
 .navLink {
@@ -29,4 +37,25 @@
 
 .active {
     color: var(--button-hover)
+}
+
+@media screen and (min-width: 768px) {
+    .navBox {
+        max-width: 768px;
+        gap: 160px;
+        justify-content: flex-start;
+        padding: 16px 32px;
+    }
+
+        .linksBox {
+            gap: 32px;
+        }
+}
+
+@media screen and (min-width: 1440px) {
+    .navBox {
+            gap: 450px;
+            padding: 24px 64px;
+            max-width: 1440px;
+        }
 }

@@ -108,8 +108,8 @@ const FilterForm = () => {
                         </Field>
                 </div>
             </div>
+                  <p>Filters</p>
             <div className={css.filtersBox}>
-                <p>Filters</p>
                     <div className={css.filterWrapper}>
                         <h3 className={css.title}>Vehicle Equipment</h3>
                         <span className={css.line}></span>

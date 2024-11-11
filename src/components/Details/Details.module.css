@@ -1,49 +1,14 @@
-.listItemBox {
-    padding: 24px;
-    max-width: 888px;
-    border: 1px solid var(--gray-light);
-    border-radius: 20px;
-}
-
-.image {
-    height: 320px;
-    width: 292px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-}
-
-.listItemBox {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
-
-.infoWrapper {
+.itemDetailsBox {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-width: 524px;
-    width: 100%;
+    margin-bottom: 30px;
 }
 
 .namePriceWrapper {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.namePriceBox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.priceBox {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    align-items: center;
 }
 
 .nameTitle,
@@ -58,7 +23,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
 }
 
 .ratingBoxInfo {
@@ -68,14 +33,18 @@
 }
 
 .ratingBoxInfoText {
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-12);
     font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-16-24);
+    line-height: var(--line-height-12-16);
     letter-spacing: var(--letter-spacing-0);
 }
 
 .textUnderline {
     position: relative;
+    font-size: var(--font-size-12);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-12-16);
+    letter-spacing: var(--letter-spacing-0);
 }
 
 .textUnderline::after {
@@ -88,71 +57,15 @@
     background-color: currentColor;
 }
 
-.iconHeart:hover,
-.iconHeart:focus {
-    fill: var(--button);
-}
-
 .iconStar {
     fill: var(--rating);
 }
 
-.descText {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-16-24);
-    letter-spacing: var(--letter-spacing-0);
-    color: var(--text);
-    max-width: 525px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.button {
-    max-width: 166px;
-}
-
-.badgesList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-height: 104px;
-    overflow: auto;
-}
-
-.badgesItem {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-    padding: 12px 18px;
-    background-color: var(--badges);
-    border: none;
-    border-radius: 30px;
-    max-width: max-content;
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--line-height-16-24);
-    letter-spacing: var(--letter-spacing-0);
-}
-
-.badgesItem::first-letter {
-    text-transform: uppercase;
-}
-
-.Water,
-.Gas,
-.Microwave {
-    fill: none;
-    stroke: var(--main);
-}
-
 .gallery {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 48px;
+    gap: 24px;
 }
 
 .galleryImage {
@@ -165,28 +78,21 @@
 .featuresRevievsBox {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    justify-content: space-between;
     border-bottom: 1px solid var(--gray-light);
     margin-bottom: 44px;
-    
-}
-
-.itemDetailsBox {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-bottom: 60px;
 }
 
 .tabButton {
     display: flex;
-    padding-bottom: 24px;
+    padding-bottom: 12px;
     background-color: transparent;
     color: var(--main);
     border-radius: 0;
-    font-size: var(--font-size-20);
+    padding: 12px 18px;
+    font-size: var(--font-size-16);
     font-weight: var(--font-weight-semi-bold);
-    line-height: var(--line-height-20-24);
+    line-height: var(--line-height-16-24);
     letter-spacing: var(--letter-spacing-0);
 }
 
@@ -210,6 +116,54 @@
 
 .featuresFormBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .ratingBox {
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    .ratingBoxInfoText,
+    .textUnderline {
+        font-size: var(--font-size-16);
+        line-height: var(--line-height-16-24);
+    }
+
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .featuresRevievsBox {
+        justify-content: flex-start;
+    }
+
+    .featuresFormBox {
+        align-items: center;
+    }
+
+    .tabButton {
+        font-size: var(--font-size-20);
+        line-height: var(--line-height-20-24);
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    .gallery {
+        gap: 48px;
+    }
+
+    .itemDetailsBox {
+        gap: 28px;
+        margin-bottom: 60px;
+    }
+
+    .featuresFormBox {
+        flex-direction: row;
+    }
 }

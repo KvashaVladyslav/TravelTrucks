@@ -1,20 +1,20 @@
-
 .ratingStars {
     display: flex;
 }
+
 .starYellow {
     fill: var(--rating);
 }
+
 .starGray {
     fill: var(--badges);
 }
- 
+
 .list {
     display: flex;
     flex-direction: column;
     gap: 44px;
-    max-width: 631px;
-    min-width: 631px;
+    max-width: 320px;
 }
 
 .avatar {
@@ -59,4 +59,11 @@
     line-height: var(--line-height-16-24);
     letter-spacing: var(--letter-spacing-0);
     color: var(--text)
+}
+
+@media screen and (min-width: 768px) {
+.list {
+    max-width: 631px;
+    min-width: 631px;
+}
 }

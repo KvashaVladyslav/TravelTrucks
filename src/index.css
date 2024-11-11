@@ -46,6 +46,7 @@ img {
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
 
+  --font-size-12: 12px;
   --font-size-16: 16px;
   --font-size-20: 20px;
   --font-size-24: 24px;
@@ -61,6 +62,7 @@ img {
   --line-height-24-32: 1.3333;
   --line-height-20-24: 1.2;
   --line-height-16-24: 1.5;
+  --line-height-12-16: 1.25;
 
   --transition: background-color 0.3s ease, box-shadow 0.3s ease;;
 }

@@ -1,7 +1,7 @@
 .background {
     background-image: url(../../assets/homepage.webp);
-    background-size: cover;
     height: 92.4vh;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -18,7 +18,9 @@ screen and (min-device-pixel-ratio: 2) {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 260px 805px 260px 64px;
+    padding: 200px 20px 30px;
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .titleBox {
@@ -28,14 +30,6 @@ screen and (min-device-pixel-ratio: 2) {
 }
 
 .mainTitle {
-    font-size: var(--font-size-48);
-    font-weight: var(--font-weight-semi-bold);
-    color: var(--white);
-    letter-spacing: var(--letter-spacing-002);
-    line-height: var(--line-height-48-32);
-}
-
-.descTitle {
     font-size: var(--font-size-24);
     font-weight: var(--font-weight-semi-bold);
     color: var(--white);
@@ -43,10 +37,18 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: var(--line-height-24-32);
 }
 
+.descTitle {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-semi-bold);
+    color: var(--white);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-16-24);
+}
+
 .link {
     display: flex;
     justify-content: center;
-    padding: 16px 32px;
+    padding: 14px 24px;
     font-family: var(--font-family);
     font-weight: var(--font-weight-regular);
     color: var(--white);
@@ -56,11 +58,54 @@ screen and (min-device-pixel-ratio: 2) {
     border-radius: 30px;
     font-size: var(--font-size-16);
     letter-spacing: var(--letter-spacing-002);
-    max-width: 173px;
+    max-width: 134px;
 }
 
 .link:hover,
 .link:focus {
     background-color: var(--button-hover);
     transition: var(--transition);
+}
+
+@media screen and (min-width: 768px) {
+    .infoWrapper {
+        max-width: 768px;
+        width: max-content;
+    }
+
+    .mainTitle {
+        font-size: var(--font-size-48);
+        letter-spacing: var(--letter-spacing-002);
+        line-height: var(--line-height-48-32);
+    }
+    
+    .descTitle {
+        font-size: var(--font-size-24);
+        letter-spacing: var(--letter-spacing-0);
+        line-height: var(--line-height-24-32);
+    }
+
+    .link {
+        padding: 16px 32px;
+        border-radius: 30px;
+        max-width: 173px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 260px 805px 260px 64px;
+        max-width: 1440px;
+    }
+    
+    .titleBox {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 }
