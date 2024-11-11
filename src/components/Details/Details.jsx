@@ -14,7 +14,6 @@ export default function Details() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const truck = useSelector(selectedTruck);
-    const loading = useSelector(state => state.trucks.loading);
 
     const [activeTab, setActiveTab] = useState('features');
 
@@ -31,9 +30,6 @@ export default function Details() {
     }
   }, [dispatch, id, truck]);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
 
     if (!truck) {
         return <div>Truck not found</div>;

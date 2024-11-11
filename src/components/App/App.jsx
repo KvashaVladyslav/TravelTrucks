@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Toaster } from 'react-hot-toast';
+import Loader from "../Loader/Loader.jsx";
 
 
 const Navigation = lazy(() => import("../Navigation/Navigation"))
@@ -20,7 +21,7 @@ export default function App() {
       reverseOrder={false}
     />
       <Navigation />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader/>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />

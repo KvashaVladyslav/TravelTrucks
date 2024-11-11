@@ -1,0 +1,87 @@
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+.truck {
+    display: flex;
+    align-items: center;
+    animation: moveTruck 2s linear infinite;
+}
+
+@keyframes moveTruck {
+    0% {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.truckBody {
+    width: 60px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.window {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.cargo {
+    width: 30px;
+    height: 20px;
+    background-color: #555;
+    position: absolute;
+    right: -25px;
+    top: -10px;
+    border-radius: 2px;
+}
+
+.wheel {
+    width: 15px;
+    height: 15px;
+    background-color: #111;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    animation: spinWheel 0.5s linear infinite;
+}
+
+.wheelLeft {
+    left: 5px;
+}
+
+.wheelRight {
+    right: 5px;
+}
+
+@keyframes spinWheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
