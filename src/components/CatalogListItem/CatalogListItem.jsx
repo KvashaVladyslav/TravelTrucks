@@ -32,7 +32,8 @@ export default function CatalogListItem({
   const navigate = useNavigate();
   const favorites = useSelector(selectFavorites);
 
-  const handleShowMore = () => {
+    const handleShowMore = () => {
+    window.scrollTo(0, 0);
     navigate(`/catalog/${id}`);
   };
 
