@@ -14,6 +14,7 @@
     flex-direction: column;
     gap: 44px;
     max-width: 631px;
+    min-width: 631px;
 }
 
 .avatar {
