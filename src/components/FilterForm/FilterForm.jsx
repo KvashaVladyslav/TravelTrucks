@@ -93,13 +93,16 @@ const FilterForm = () => {
                               components={{ DropdownIndicator: null }}
                               className={css.widthForInput}
                               styles={{
-                                control: (provided) => ({
-                                  ...provided,
+                                control: (provided, state) => ({
+                                    ...provided,
                                     paddingLeft: '20px',
-                                      border: 'none',
-                                    background: 'var(--inputs)'
-                                })
-                              }}
+                                    border: 'none',
+                                    background: 'var(--inputs)',
+                                    cursor: 'pointer',
+                                    boxShadow: state.isFocused ? 'none' : provided.boxShadow,
+                                    outline: state.isFocused ? 'none' : provided.outline,
+                                  }),
+                                }}
                             />
                             )}
                         </Field>

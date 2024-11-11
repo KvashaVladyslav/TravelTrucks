@@ -1,7 +1,9 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorite, removeFavorite, selectFavorites } from '../../redux/favourites/slice';
 import { useNavigate } from 'react-router-dom';
 import css from './CatalogListItem.module.css';
 import BadgesList from '../BadgesList/BadgesList';
-import icons from '../../assets/icons.svg'
+import icons from '../../assets/icons.svg';
 
 export default function CatalogListItem({
   item: {
@@ -26,10 +28,22 @@ export default function CatalogListItem({
     reviews,
   },
 }) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const favorites = useSelector(selectFavorites);
 
-    const handleShowMore = () => {
+  const handleShowMore = () => {
     navigate(`/catalog/${id}`);
+  };
+
+  const isFavorite = favorites.some(truck => truck.id === id);
+
+  const handleFavoriteClick = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite({ id }));
+    } else {
+      dispatch(addFavorite({ id, name, price, rating, location, description, gallery, reviews }));
+    }
   };
 
   const trueFeatures = [
@@ -79,7 +93,12 @@ export default function CatalogListItem({
               <h2 className={css.nameTitle}>{name}</h2>
               <div className={css.priceBox}>
                 <p className={css.priceText}>€{price}.00</p>
-                <svg className={css.iconHeart} height={24} width={26}>
+                <svg
+                  className={`${css.iconHeart} ${isFavorite ? css.filledHeart : ''}`}
+                  height={24}
+                  width={26}
+                  onClick={handleFavoriteClick}
+                >
                   <use href={`${icons}#icon-heart`}></use>
                 </svg>
               </div>
@@ -103,11 +122,11 @@ export default function CatalogListItem({
           </div>
           <p className={css.descText}>{description}</p>
           <div>
-              <BadgesList
-            features={trueFeaturesList}
-            iconMap={iconMap}
-            toUpperCaseFirstLatter={toUpperCaseFirstLatter}
-          />
+            <BadgesList
+              features={trueFeaturesList}
+              iconMap={iconMap}
+              toUpperCaseFirstLatter={toUpperCaseFirstLatter}
+            />
           </div>
           <button className={css.button} onClick={handleShowMore}>
             Show more

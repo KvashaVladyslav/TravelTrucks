@@ -44,8 +44,13 @@
     border: none;
     border-radius: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
+.input:hover,
+.input:focus {
+    outline: 1px solid var(--gray-light)
+}
 
 input[type="date"] {
     -webkit-appearance: none;

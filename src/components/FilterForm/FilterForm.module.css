@@ -113,5 +113,10 @@
     background-color: var(--inputs);
     border: none;
     border-radius: 10px;
-    width: 100%;
+    cursor: pointer;
+}
+
+.widthForInput:hover,
+.widthForInput:focus {
+    outline: 1px solid var(--gray-light);
 }

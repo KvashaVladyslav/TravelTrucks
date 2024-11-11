@@ -88,8 +88,7 @@
     background-color: currentColor;
 }
 
-.iconHeart:hover,
-.iconHeart:focus {
+.iconHeart:hover {
     fill: var(--button);
 }
 
@@ -146,4 +145,13 @@
 .Microwave {
     fill: none;
     stroke: var(--main);
+}
+
+.iconHeart {
+    cursor: pointer;
+    fill: var(--main);
+}
+
+.filledHeart {
+    fill: var(--button-hover);
 }
