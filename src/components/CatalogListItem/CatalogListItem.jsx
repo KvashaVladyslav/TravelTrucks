@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite, selectFavorites } from '../../redux/favourites/slice';
-import { useNavigate } from 'react-router-dom';
 import css from './CatalogListItem.module.css';
 import BadgesList from '../BadgesList/BadgesList';
 import icons from '../../assets/icons.svg';
@@ -29,12 +28,11 @@ export default function CatalogListItem({
   },
 }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const favorites = useSelector(selectFavorites);
 
     const handleShowMore = () => {
     window.scrollTo(0, 0);
-    navigate(`/catalog/${id}`);
+    window.open(`/catalog/${id}`, "_blank");
   };
 
   const isFavorite = favorites.some(truck => truck.id === id);
